@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="initGame()">
+    <div class="game">
+        <h1>Minesweeper</h1>
+        <div class="level-btns">
+            <div class="level-btn" data-size="4" data-mines="2" onclick="setDifficulty(this)">Beginner</div>
+            <div class="level-btn" data-size="8" data-mines="12" onclick="setDifficulty(this)">Medium</div>
+            <div class="level-btn" data-size="12" data-mines="30" onclick="setDifficulty(this)">Expert</div>
+        </div>
+        <div class="hud">
+            <div>
+                <p>Time Elapsed :<span class="timer">0</span></p>
+            </div>
+            <div>
+                <p onclick="initGame()"><span class="reset-btn">😀</span></p>
+            </div>
+            <div>
+                <p>Mines :<span class="mines-on-board"></span></p>
+            </div>
+        </div>
+        <div class="lives hud"></div>
+        <table>
+            <tbody class="board"></tbody>
+        </table>
+    </div>
+    <footer>Project by: Elliot Sherman AKA Eliyahu Shvartov</footer>
+    <script src="js/util.js"></script>
+    <script src="js/cell.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
